@@ -16,12 +16,14 @@ import com.google.firebase.ktx.Firebase
 import com.natiqhaciyef.clot_mobile.databinding.ActivitySplashBinding
 import com.natiqhaciyef.clot_mobile.view.screen.home.MainActivity
 import com.natiqhaciyef.clot_mobile.view.screen.registration.RegisterActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 
+@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
     private lateinit var auth: FirebaseAuth
