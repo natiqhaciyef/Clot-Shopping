@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.natiqhaciyef.clot_mobile.R
 import com.natiqhaciyef.clot_mobile.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     override fun onCreateView(

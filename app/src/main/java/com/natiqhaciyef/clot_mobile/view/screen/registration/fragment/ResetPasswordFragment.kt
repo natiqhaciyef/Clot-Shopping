@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.natiqhaciyef.clot_mobile.R
 import com.natiqhaciyef.clot_mobile.databinding.FragmentResetPasswordBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class ResetPasswordFragment : Fragment() {
     private lateinit var binding: FragmentResetPasswordBinding
     override fun onCreateView(
