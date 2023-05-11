@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.natiqhaciyef.clot_mobile.R
 import com.natiqhaciyef.clot_mobile.databinding.FragmentRegisterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     override fun onCreateView(
