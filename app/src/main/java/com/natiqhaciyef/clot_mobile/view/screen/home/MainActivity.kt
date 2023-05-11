@@ -1,4 +1,4 @@
-package com.natiqhaciyef.clot_mobile
+package com.natiqhaciyef.clot_mobile.view.screen.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
