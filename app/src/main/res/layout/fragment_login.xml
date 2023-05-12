@@ -1,14 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appLightGray"
     tools:context=".view.screen.registration.fragment.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/titleText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/figtree_bold"
+        android:text="Sign in"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <EditText
+        android:id="@+id/emailTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/custom_registration_input_background"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <EditText
+        android:id="@+id/passwordTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_registration_input_background"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTextLogin" />
+
+    <ImageView
+        android:id="@+id/visibleIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:src="@drawable/visibility"
+        app:layout_constraintBottom_toBottomOf="@id/passwordTextLogin"
+        app:layout_constraintEnd_toEndOf="@id/passwordTextLogin"
+        app:layout_constraintTop_toTopOf="@id/passwordTextLogin" />
+
+    <ImageView
+        android:id="@+id/visibleOffIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/visibility_off"
+        app:layout_constraintBottom_toBottomOf="@id/passwordTextLogin"
+        app:layout_constraintEnd_toEndOf="@id/passwordTextLogin"
+        app:layout_constraintTop_toTopOf="@id/passwordTextLogin" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="5dp"
+        android:text="Forgot password ?"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordTextLogin" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginButton"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/custom_registration_button_background"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
+
+    <TextView
+        android:id="@+id/createNewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/figtree_semi_bold"
+        android:text="Don't have an account ?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <TextView
+        android:id="@+id/goToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/figtree_bold"
+        android:text="Create one"
+        android:textColor="@color/appDarkPurpleBlack"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/createNewAccount"
+        app:layout_constraintStart_toEndOf="@id/createNewAccount"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginWithGoogle"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/goToRegister"
+        android:background="@drawable/custom_registration_social_button_background"
+        android:text="       Continue with Google"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/google"
+        android:elevation="5dp"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/loginWithGoogle"
+        app:layout_constraintStart_toStartOf="@id/loginWithGoogle"
+        app:layout_constraintBottom_toBottomOf="@id/loginWithGoogle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginWithAppleID"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginWithGoogle"
+        android:background="@drawable/custom_registration_social_button_background"
+        android:text="       Continue with Apple ID"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/apple"
+        android:elevation="5dp"
+        app:layout_constraintVertical_bias="0.465"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/loginWithAppleID"
+        app:layout_constraintStart_toStartOf="@id/loginWithAppleID"
+        app:layout_constraintBottom_toBottomOf="@id/loginWithAppleID" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginWithFacebookID"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginWithAppleID"
+        android:background="@drawable/custom_registration_social_button_background"
+        android:text="       Continue with Facebook"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/facebook"
+        android:elevation="5dp"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="@id/loginWithFacebookID"
+        app:layout_constraintStart_toStartOf="@id/loginWithFacebookID"
+        app:layout_constraintBottom_toBottomOf="@id/loginWithFacebookID" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
