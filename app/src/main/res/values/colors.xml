@@ -5,6 +5,8 @@
 
     <color name="appMainPurple">#9747FF</color>
     <color name="appExtraLightPurple">#E5D8F6</color>
+    <color name="appLightGray">#F5F5F5</color>
+    <color name="appDarkPurpleBlack">#211132</color>
 
     <!-- Custom App Colors -->
     <color name="light_red">#FB6565</color>
