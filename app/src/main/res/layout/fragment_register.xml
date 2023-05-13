@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/figtree_bold"
         android:text="@string/sign_up"
         android:textColor="@color/black"
@@ -51,6 +51,20 @@
         app:layout_constraintTop_toBottomOf="@id/usernameTextRegister" />
 
     <EditText
+        android:id="@+id/phoneTextRegister"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_registration_input_background"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:paddingStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTextRegister" />
+
+    <EditText
         android:id="@+id/passwordTextRegister"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -62,7 +76,7 @@
         android:paddingStart="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailTextRegister" />
+        app:layout_constraintTop_toBottomOf="@id/phoneTextRegister" />
 
     <ImageView
         android:id="@+id/visibleIcon"
@@ -89,7 +103,7 @@
         android:id="@+id/registerButton"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/custom_registration_button_background"
         android:text="@string/register"
         android:textAllCaps="false"
@@ -133,7 +147,7 @@
         android:id="@+id/registerWithGoogle"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/goToLogin"

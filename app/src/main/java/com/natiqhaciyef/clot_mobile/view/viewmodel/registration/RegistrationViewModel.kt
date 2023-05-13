@@ -15,42 +15,56 @@ import javax.inject.Inject
 class RegistrationViewModel @Inject constructor(
     var userRepo: UserRepository
 ) : BaseViewModel() {
-    val auth = Firebase.auth
+    private val auth = Firebase.auth
 
     fun registerUser(userModel: UserModel) {
-        auth.createUserWithEmailAndPassword(
-            userModel.email,
-            userModel.password
-        )
-            .addOnSuccessListener {
-                registerForLocalDB(userModel)
-            }
-            .addOnFailureListener {
+        if (userModel.email.isNotEmpty()
+            && userModel.password.isNotEmpty()
+            && userModel.phone.isNotEmpty()
+            && userModel.username.isNotEmpty()
+        ) {
+            if (userModel.email.endsWith("@gmail.com")
+                && userModel.password.length >= 8
+            ){
+                auth.createUserWithEmailAndPassword(
+                    userModel.email,
+                    userModel.password
+                )
+                    .addOnSuccessListener {
+                        registerForLocalDB(userModel)
+                    }
+                    .addOnFailureListener {
 
+                    }
             }
+        }
     }
 
     fun loginUser(email: String, password: String) {
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnSuccessListener {
+        if (email.isNotEmpty() && password.isNotEmpty()) {
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnSuccessListener {
 
-            }
-            .addOnFailureListener {
+                }
+                .addOnFailureListener {
 
-            }
+                }
+        }
     }
 
-    fun resetPasswordUser(email: String){
-        auth.sendPasswordResetEmail(email)
-            .addOnSuccessListener {
+    fun resetPasswordUser(email: String) {
+        if (email.isNotEmpty()) {
+            auth.sendPasswordResetEmail(email)
+                .addOnSuccessListener {
 
-            }
-            .addOnFailureListener {
+                }
+                .addOnFailureListener {
 
-            }
+                }
+        }
     }
 
-    private fun registerForLocalDB(userModel: UserModel){
+    private fun registerForLocalDB(userModel: UserModel) {
         viewModelScope.launch(Dispatchers.IO) {
             userRepo.insertUser(userModel)
         }
