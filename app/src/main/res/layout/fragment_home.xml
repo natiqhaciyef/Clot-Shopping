@@ -1,78 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appLightGray"
     tools:context=".view.screen.home.fragment.HomeFragment">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/userProfileImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/appExtraLightPurple"
-        android:layout_margin="20dp"
-        app:shapeAppearanceOverlay="@style/CircleImage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/userNameSmallText"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="JK"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="@id/userProfileImageView"
-        app:layout_constraintBottom_toBottomOf="@id/userProfileImageView"
-        app:layout_constraintEnd_toEndOf="@id/userProfileImageView"
-        app:layout_constraintStart_toStartOf="@id/userProfileImageView" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:background="@color/appExtraLightPurple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/cartNavigationImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@color/appMainPurple"
-        android:layout_margin="20dp"
-        app:shapeAppearanceOverlay="@style/CircleImage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/cartIcon"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:src="@drawable/cart_icon"
-        app:layout_constraintTop_toTopOf="@id/cartNavigationImageView"
-        app:layout_constraintBottom_toBottomOf="@id/cartNavigationImageView"
-        app:layout_constraintEnd_toEndOf="@id/cartNavigationImageView"
-        app:layout_constraintStart_toStartOf="@id/cartNavigationImageView" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="170dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toTopOf="@+id/userProfileImageView"
-        app:layout_constraintBottom_toBottomOf="@id/userProfileImageView"
-        app:layout_constraintEnd_toStartOf="@id/cartNavigationImageView"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
-
-        <AutoCompleteTextView
-            android:id="@+id/dropDownListElement"
-            android:layout_width="match_parent"
-            android:layout_height="47dp"
-            android:inputType="none"
-            android:background="@drawable/custom_drop_down_menu_background"
-            android:text="Women"
-            android:textSize="16sp"
-            android:textStyle="bold"
+        <TextView
+            android:id="@+id/userNameSmallText"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="JK"
             android:textColor="@color/black"
-            android:gravity="bottom|center" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/userProfileImageView"
+            app:layout_constraintEnd_toEndOf="@id/userProfileImageView"
+            app:layout_constraintStart_toStartOf="@id/userProfileImageView"
+            app:layout_constraintTop_toTopOf="@id/userProfileImageView" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cartNavigationImageView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:background="@color/appMainPurple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/cart_icon"
+            app:layout_constraintBottom_toBottomOf="@id/cartNavigationImageView"
+            app:layout_constraintEnd_toEndOf="@id/cartNavigationImageView"
+            app:layout_constraintStart_toStartOf="@id/cartNavigationImageView"
+            app:layout_constraintTop_toTopOf="@id/cartNavigationImageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="170dp"
+            android:layout_height="53dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/userProfileImageView"
+            app:layout_constraintEnd_toStartOf="@id/cartNavigationImageView"
+            app:layout_constraintStart_toEndOf="@id/userProfileImageView"
+            app:layout_constraintTop_toTopOf="@+id/userProfileImageView">
+
+            <AutoCompleteTextView
+                android:id="@+id/dropDownListElement"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/custom_drop_down_menu_background"
+                android:gravity="bottom|center"
+                android:inputType="none"
+                android:text="@string/women"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/categoryTitleTextHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="@string/shop_by_categories"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userProfileImageView" />
+
+        <TextView
+            android:id="@+id/seeAllCategoriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/figtree_semi_bold"
+            android:text="@string/see_all"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/categoryTitleTextHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userProfileImageView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTypeCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryTitleTextHome" />
+
+        <TextView
+            android:id="@+id/topSellingTitleTextHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/figtree_bold"
+            android:text="@string/top_selling"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewTypeCategories" />
+
+        <TextView
+            android:id="@+id/seeAllTopSellingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/figtree_semi_bold"
+            android:text="@string/see_all"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/topSellingTitleTextHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewTypeCategories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTopItems"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topSellingTitleTextHome" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

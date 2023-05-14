@@ -16,4 +16,8 @@
     <string name="create_one">Create one</string>
     <string name="reset_password">Reset password</string>
     <string name="send">Send</string>
+    <string name="see_all">see all</string>
+    <string name="top_selling">Top selling</string>
+    <string name="shop_by_categories">Shop by Categories</string>
+    <string name="women">Women</string>
 </resources>
