@@ -1,4 +1,4 @@
-package com.natiqhaciyef.clot_mobile.data.models
+package com.natiqhaciyef.clot_mobile.data.models.for_database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
