@@ -1,11 +1,11 @@
-package com.natiqhaciyef.clot_mobile.data.roomdb
+package com.natiqhaciyef.clot_mobile.data.roomdb.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.natiqhaciyef.clot_mobile.data.models.UserModel
+import com.natiqhaciyef.clot_mobile.data.models.for_database.UserModel
 
 @Dao
 interface UserDao {

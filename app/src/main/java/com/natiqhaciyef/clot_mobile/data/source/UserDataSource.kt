@@ -1,7 +1,7 @@
 package com.natiqhaciyef.clot_mobile.data.source
 
-import com.natiqhaciyef.clot_mobile.data.models.UserModel
-import com.natiqhaciyef.clot_mobile.data.roomdb.UserDao
+import com.natiqhaciyef.clot_mobile.data.models.for_database.UserModel
+import com.natiqhaciyef.clot_mobile.data.roomdb.dao.UserDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

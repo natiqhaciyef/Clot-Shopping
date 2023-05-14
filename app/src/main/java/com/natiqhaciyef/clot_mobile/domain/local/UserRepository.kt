@@ -1,6 +1,6 @@
 package com.natiqhaciyef.clot_mobile.domain.local
 
-import com.natiqhaciyef.clot_mobile.data.models.UserModel
+import com.natiqhaciyef.clot_mobile.data.models.for_database.UserModel
 import com.natiqhaciyef.clot_mobile.data.source.UserDataSource
 
 class UserRepository(private var ds: UserDataSource) {

@@ -3,7 +3,7 @@ package com.natiqhaciyef.clot_mobile.view.viewmodel.registration
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.natiqhaciyef.clot_mobile.data.models.UserModel
+import com.natiqhaciyef.clot_mobile.data.models.for_database.UserModel
 import com.natiqhaciyef.clot_mobile.domain.local.UserRepository
 import com.natiqhaciyef.clot_mobile.view.viewmodel.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
