@@ -7,7 +7,7 @@
 
         <!-- Optional: set to transparent if your app is drawing behind the status bar. -->
         <item name="android:statusBarColor">
-            @android:color/transparent
+            @color/appLightGray
         </item>
 
         <item name="windowActionBar">false</item>

@@ -1,8 +1,5 @@
 package com.natiqhaciyef.clot_mobile.data.roomdb
 
-import android.text.TextUtils
-import androidx.room.TypeConverter
-import com.google.gson.Gson
 import com.natiqhaciyef.clot_mobile.data.models.ProductModel
 import com.natiqhaciyef.clot_mobile.data.models.for_database.ProductModelForDB
 import com.natiqhaciyef.clot_mobile.domain.util.toSQLiteMutableList

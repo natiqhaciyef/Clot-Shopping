@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.natiqhaciyef.clot_mobile.R
-import com.natiqhaciyef.clot_mobile.data.models.UserModel
+import com.natiqhaciyef.clot_mobile.data.models.for_database.UserModel
 import com.natiqhaciyef.clot_mobile.databinding.FragmentRegisterBinding
 import com.natiqhaciyef.clot_mobile.view.viewmodel.registration.RegistrationViewModel
 import dagger.hilt.android.AndroidEntryPoint
