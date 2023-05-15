@@ -15,7 +15,8 @@ class CategoryAdapter(val context: Context, val list: MutableList<CategoryModel>
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryHolder {
-        val binding = RecyclerCategoryItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        val binding =
+            RecyclerCategoryItemBinding.inflate(LayoutInflater.from(context), parent, false)
         return CategoryHolder(binding)
     }
 
@@ -25,7 +26,14 @@ class CategoryAdapter(val context: Context, val list: MutableList<CategoryModel>
         val view = holder.binding
         val category = list[position]
 
-//        Glide.with(context).load(category.image).into(view.categoryImageView)
+        view.categoryImageView.setImageResource(
+            context.resources.getIdentifier(
+                category.image,
+                "drawable",
+                context.packageName
+            )
+        )
+
         view.categoryTitleText.text = category.title
 
     }
