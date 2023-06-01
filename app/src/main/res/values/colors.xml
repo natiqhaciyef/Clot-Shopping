@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="appMainPurple">#9747FF</color>
+    <color name="appExtraLightPurple">#E5D8F6</color>
+    <color name="appLightGray">#F5F5F5</color>
+    <color name="appDarkPurpleBlack">#211132</color>
+
+    <!-- Custom App Colors -->
+    <color name="light_red">#FB6565</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#880404</color>
+
+    <color name="light_blue">#5FB2FB</color>
+    <color name="blue">#0088FF</color>
+    <color name="dark_blue">#004785</color>
+
+    <color name="light_yellow">#FFE054</color>
+    <color name="yellow">#FFD000</color>
+    <color name="dark_yellow">#987C00</color>
+
+    <color name="light_orange">#FD9749</color>
+    <color name="orange">#F16800</color>
+    <color name="dark_orange">#873D04</color>
+
+    <color name="light_purple">#A173FF</color>
+    <color name="purple">#5E35B1</color>
+    <color name="dark_purple">#3C148F</color>
+
+    <color name="light_pink">#DC65FB</color>
+    <color name="pink">#A521C8</color>
+    <color name="dark_pink">#691580</color>
+
+    <color name="light_green">#7CB342</color>
+    <color name="green">#429145</color>
+    <color name="dark_green">#286A2B</color>
+
+
+    <color name="transparent">#00FFFFFF</color>
+
+</resources>

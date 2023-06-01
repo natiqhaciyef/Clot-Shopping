@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/allCategoriesFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.AllCategoriesFragment"
+        android:label="fragment_all_categories"
+        tools:layout="@layout/fragment_all_categories" />
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.payment.PersonalInformationFragment"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" />
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.natiqhaciyef.clot_mobile.view.screen.home.fragment.payment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+</navigation>

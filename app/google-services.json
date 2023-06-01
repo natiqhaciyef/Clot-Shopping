@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "456515938303",
+    "project_id": "clot-app",
+    "storage_bucket": "clot-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456515938303:android:27c98b982d1424bad1a9ca",
+        "android_client_info": {
+          "package_name": "com.natiqhaciyef.clot_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456515938303-3575blsamn8cuiggmivv9sc4p1pdrkhv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.natiqhaciyef.clot_mobile",
+            "certificate_hash": "a20cfbe180751fbd81f20fab54dff069176e19f7"
+          }
+        },
+        {
+          "client_id": "456515938303-b58tr3lcpb6gv0ehitfo41dprs7hshk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbVowrGAJa4RGw26CW05SXnR6-aDT1OaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456515938303-b58tr3lcpb6gv0ehitfo41dprs7hshk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
